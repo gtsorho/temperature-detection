@@ -11,6 +11,10 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        User::create([
+            "name" => 'geroge',
+            "phone" => '+233508924141',
+            "email" => 'sorho@yahoo.com'
+         ]);
     }
 }

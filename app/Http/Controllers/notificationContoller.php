@@ -15,7 +15,8 @@ class notificationContoller extends Controller
         
         $User = User::first();
         $temp = request(['temperature']);
-        $User->notify(new tempAlert($temp['temperature']));
+        dd($temp['temperature']);
+        // $User->notify(new tempAlert($temp['temperature']));
 
     }
 

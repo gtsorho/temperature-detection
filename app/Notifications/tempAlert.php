@@ -32,7 +32,7 @@ class tempAlert extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['mail', 'nexmo'];
+        return ['mail'];
     }
 
     /**
@@ -57,10 +57,10 @@ class tempAlert extends Notification implements ShouldQueue
      * @param  mixed  $notifiable
      * @return array
      */
-    public function toNexmo($notifiable)
-    {
-        $temp = $this->temp;
-        return (new NexmoMessage())
-                        ->content(" SYSTEM Temperature above set threshold, ". $temp ." degrees");
-    }
+    // public function toNexmo($notifiable)
+    // {
+    //     $temp = $this->temp;
+    //     return (new NexmoMessage())
+    //                     ->content(" SYSTEM Temperature above set threshold, ". $temp ." degrees");
+    // }
 }

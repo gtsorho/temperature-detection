@@ -13,7 +13,7 @@ class notificationContoller extends Controller
     $notification = notification::create(request(['temperature'])); 
     if (request('temperature') >= 40 ){
         
-       return $User = User::first();
+        $User = User::first();
         $temp = request(['temperature']);
         // dd($temp['temperature']);
         $User->notify(new tempAlert($temp['temperature']));

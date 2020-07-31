@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use App\notification;
+// use App\notification;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Http\Request;
 use App\Notifications\tempAlert;
 

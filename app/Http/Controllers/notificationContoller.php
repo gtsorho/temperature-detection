@@ -12,9 +12,10 @@ class notificationContoller extends Controller
     public function store(Request $request){
     $notification = notification::create(request(['temperature'])); 
     if (request('temperature') >= 40 ){  
-        $User = User::first();
+        $Users = User::all();
         $temp = request(['temperature']);
-        $User->notify(new tempAlert($temp['temperature']));
+        Notification::send($Users, new tempAlert($temp['temperature']));
+        // $User->notify(new tempAlert($temp['temperature']));
     }
 
     }

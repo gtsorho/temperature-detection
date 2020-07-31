@@ -17,5 +17,14 @@ class UsersTableSeeder extends Seeder
             "phone" => '+233508924141',
             "email" => 'sorho@yahoo.com'
          ]);
+
+         User::create([
+            "name" => 'Debbie',
+            "phone" => '+233202429593',
+            "email" => 'deborahludwine@gmail.com'
+         ]);
+
+         
+
     }
 }
